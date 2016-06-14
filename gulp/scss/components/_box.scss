@@ -1,0 +1,19 @@
+
+@mixin boxes{
+
+  .grid-box{
+    @include grid-box(100px, black, #ccc);
+  }
+
+}
+
+@mixin grid-box($size, $txt-color, $bg-color){
+  @include dead-center-text($size);
+  float: left;
+  width: $size;
+  color: $txt-color;
+  background: $bg-color;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+}
+

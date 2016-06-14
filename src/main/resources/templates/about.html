@@ -9,9 +9,15 @@
       <h1 th:text="${title}"></h1>
       <h2 th:text="${message}"></h2>
 
-      <ul th:each="i : ${array}">
-          <li th:text="${i}"></li>
-      </ul>
+      <div class="content-banner blue">
+        Nice Banner
+      </div>
+
+      <section id="grid" class="cell-1600-10 cell-950-4 cell-500-2 cell-380-1" >
+        <div class="grid-box" th:each="i : ${array}">
+          <span th:text="${i}"></span>
+        </div>
+      </section>
 
     </main>
   </body>

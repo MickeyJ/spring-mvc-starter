@@ -6,11 +6,11 @@ gulp.task('sass',() =>{
       .pipe(sass({
         outputStyle: 'compressed'
       }))
-      .pipe(gulp.dest('./src/main/resources/static/css'));
+      .pipe(gulp.dest('src/main/resources/static/css'));
 });
 
 gulp.task('watch',() =>{
-  gulp.watch('gulp/scss/**/*.scss', ['sass']);
+  gulp.watch('gulp/scss/**/*.*', ['sass']);
 });
 
 gulp.task('default', ['sass', 'watch']);

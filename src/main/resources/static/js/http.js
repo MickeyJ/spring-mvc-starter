@@ -13,7 +13,7 @@ document.getElementById("form").addEventListener("submit", (e) =>{
       if (status == 200)
         console.log(JSON.parse(xhr.responseText));
       else
-        console.log(status)
+        console.error(xhr.status)
     }
   };
   xhr.send();

@@ -1,0 +1,48 @@
+
+@mixin banners{
+  .logo-banner{
+    @include logo-banner(MINTCREAM, black);
+    &.blue { @include logo-banner($app-blue, white); };
+    &.red { @include logo-banner( lighten(firebrick, 10%) , white); };
+    &.green { @include logo-banner($app-green, white); };
+  }
+  .content-banner{
+    @include content-banner( white, black);
+    &.honey { @include content-banner( honeydew, black); };
+    &.red { @include content-banner( lighten(crimson, 50%) , black); };
+    &.blue { @include content-banner( lighten(dodgerblue, 40%), black); };
+  }
+  .separator{
+    margin: 3%;
+    line-height: 200%;
+    font-size: 1.2em;
+    font-weight: 200;
+
+    p{
+      text-indent: 15px;
+    }
+  }
+}
+
+@mixin logo-banner($background, $text-color){
+  font-size: 3em;
+  @include banner-color($background, $text-color);
+  @include dead-center-text(200px);
+  @include no-select-text(default);
+  @include banner-shadow(12px, 11px, $app-shadow);
+}
+
+@mixin content-banner($background, $text-color){
+  font-size: 3em;
+  margin: 1% 0;
+  @include banner-color($background, $text-color);
+  @include dead-center-text(300px);
+  @include no-select-text(default);
+  @include banner-shadow(12px, 11px, $app-shadow);
+}
+
+@mixin banner-color($background, $text-color){
+  background: $background;
+  color: $text-color;
+
+}

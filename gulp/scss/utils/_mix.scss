@@ -1,0 +1,148 @@
+
+@mixin rounded($radius: 5px){
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+@mixin no-select-text($cursor){
+  cursor: $cursor;
+  user-select: none;
+  -webkit-user-select: none;
+  &::selection{
+    background-color: transparent;
+  }
+}
+
+@mixin dead-center-text($height){
+  height: $height;
+  line-height: $height;
+  text-align: center;
+}
+
+@mixin banner-shadow($depth, $blur, $color){
+  -webkit-box-shadow: (
+          inset 0 10px $depth -#{$blur} $color,
+          inset 0 -10px $depth -#{$blur} $color
+  );
+  -moz-box-shadow: (
+          inset 0 10px $depth -#{$blur} $color,
+          inset 0 -10px $depth -#{$blur} $color
+  );
+  -o-box-shadow: (
+          inset 0 10px $depth -#{$blur} $color,
+          inset 0 -10px $depth -#{$blur} $color
+  );
+  box-shadow: (
+          inset 0 10px $depth -#{$blur} $color,
+          inset 0 -10px $depth -#{$blur} $color
+  );
+}
+
+
+/*                         border-radius
+*  -----------------------------------------------------------
+*/
+
+@mixin border-radius($radius){
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+
+/*                         TRANSITION
+*  -----------------------------------------------------------
+*/
+
+@mixin transition($type){
+  -webkit-transition: $type;
+  -o-transition: $type;
+  transition: $type;
+}
+
+
+/*                         FLEX BOX
+*  -----------------------------------------------------------
+*/
+
+@mixin display($value){
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-direction($direction){
+  -webkit-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
+@mixin justify-content($content){
+  -webkit-justify-content: $content;
+  justify-content: $content;
+}
+
+@mixin align-content($content){
+  -webkit-align-content: $content;
+  -moz-align-content: $content;
+  -ms-align-content: $content;
+  -o-align-content: $content;
+  align-content: $content;
+}
+
+@mixin align-items($content){
+  -webkit-align-items: $content;
+  -moz-align-items: $content;
+  -ms-align-items: $content;
+  -o-align-items: $content;
+  align-items: $content;
+}
+
+@mixin align-self($content){
+  -webkit-align-self: $content;
+  -moz-align-self: $content;
+  -ms-align-self: $content;
+  -o-align-self: $content;
+  align-self: $content;
+}
+
+@mixin flex-grow($grow){
+  -webkit-flex-grow: $grow;
+  -moz-flex-grow: $grow;
+  -ms-flex-grow: $grow;
+  -o-flex-grow: $grow;
+  flex-grow: $grow;
+}
+
+@mixin flex-flow($flow){
+  -webkit-flex-flow: $flow;
+  -moz-flex-flow: $flow;
+  -ms-flex-flow: $flow;
+  -o-flex-flow: $flow;
+  flex-flow: $flow;
+}
+
+@mixin flex-wrap($wrap){
+  -webkit-flex-wrap: $wrap;
+  -moz-flex-wrap: $wrap;
+  -ms-flex-wrap: $wrap;
+  -o-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+
+@mixin flex($flex){
+  -webkit-box-flex: $flex;
+  -moz-box-flex: $flex;
+  -webkit-flex: $flex;
+  -ms-flex: $flex;
+  flex: $flex;
+}
+
+@mixin order($num){
+  -webkit-order: $num;
+  -moz-order: $num;
+  order: $num;
+}

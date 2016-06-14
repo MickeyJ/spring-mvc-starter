@@ -1,0 +1,26 @@
+
+nav{
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1%;
+
+  a {
+    font-size: 1.3em;
+    font-weight: 200;
+    text-decoration: none;
+    color: DodgerBlue;
+    margin: 1% 1%;
+    transition: all 0.1s;
+
+    &:hover {
+      color: #104d8d;
+      text-decoration: none;
+    }
+
+    &.active-link{
+      color: FireBrick;
+      text-decoration: none;
+    }
+
+  }
+
+}

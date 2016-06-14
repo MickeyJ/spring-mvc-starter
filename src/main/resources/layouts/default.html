@@ -12,19 +12,25 @@
     <script th:src="@{js/active_link.js}"></script>
   </head>
   <body>
+    <div id="wrapper">
 
-    <header id="header">
-      <a th:href="@{/}">Home</a>
-      <span> | </span>
-      <a th:href="@{/about}">About</a>
-    </header>
+      <header id="header">
 
-    <main id="main" class="container-fluid" layout:fragment="content">
-    </main>
+        <nav>
+          <a th:href="@{/}">Home</a>
+          <span> | </span>
+          <a th:href="@{/about}">About</a>
+        </nav>
 
-    <footer id="footer">
-      <span>&copy; Java Spring MVC</span>
-    </footer>
+      </header>
 
+      <main id="main" layout:fragment="content">
+      </main>
+
+      <footer id="footer">
+        <span>&copy; Java Spring MVC</span>
+      </footer>
+
+    </div>
   </body>
 </html>
