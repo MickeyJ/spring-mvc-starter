@@ -2,7 +2,7 @@
 @mixin boxes{
 
   .grid-box{
-    @include grid-box(100px, black, #ccc);
+    @include grid-box(100px, black, honeydew);
   }
 
 }

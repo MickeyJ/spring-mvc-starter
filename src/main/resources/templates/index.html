@@ -6,15 +6,22 @@
   <body>
     <main layout:fragment="content">
 
-      <h1 th:text="${title}"></h1>
-      <h3 th:text="${message} +', '+ ${user.userName} +'?'"></h3>
+      <section class="page-title">
+        <h1  th:text="${title}"></h1>
+        <h3 th:text="${message} +', '+ ${user.userName} +'?'"></h3>
+      </section>
 
-      <form id="form" class="form-inline">
-        <input id="user-name" class="form-control" type="text" placeholder="Name" />
-        <button type="submit" class="btn btn-success">Post Some Data</button>
-      </form>
+      <section class="container-fluid">
 
-      <a th:href="@{/api/user}">See Data</a>
+        <form id="form" class="form-inline">
+          <input id="user-name" class="form-control" type="text" placeholder="Name" />
+          <button type="submit" class="btn btn-success">Post Some Data</button>
+          <br/>
+          <a th:href="@{/api/user}">See Data</a>
+        </form>
+
+      </section>
+
 
       <script th:src="@{js/http.js}"></script>
 

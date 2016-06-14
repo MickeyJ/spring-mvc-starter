@@ -6,18 +6,24 @@
   <body>
     <main layout:fragment="content">
 
-      <h1 th:text="${title}"></h1>
+      <h1 class="page-title" th:text="${title}"></h1>
       <h2 th:text="${message}"></h2>
 
       <div class="content-banner blue">
         Nice Banner
       </div>
 
-      <section id="grid" class="cell-1600-10 cell-950-4 cell-500-2 cell-380-1" >
-        <div class="grid-box" th:each="i : ${array}">
-          <span th:text="${i}"></span>
-        </div>
+      <section class="container-fluid">
+
+        <section id="grid" class="cell-1600-8 cell-950-4 cell-500-2 cell-380-1" >
+          <div class="grid-box" th:each="i : ${array}">
+            <span th:text="${i}"></span>
+          </div>
+        </section>
+
       </section>
+
+
 
     </main>
   </body>

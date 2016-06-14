@@ -10,7 +10,7 @@ public class AboutController {
   @RequestMapping("/about")
   public String about(Model model){
 
-    model.addAttribute("array", makeArray(20));
+    model.addAttribute("array", makeArray(16));
     model.addAttribute("title", "About");
 
     return "about";
@@ -18,9 +18,7 @@ public class AboutController {
 
   public int[] makeArray(int count){
     int[] array = new int[count];
-    for(int i = 0; i < count; i++){
-      array[i] = i + 1;
-    }
+    for(int i = 0; i < count; i++) array[i] = i + 1;
     return array;
   }
 

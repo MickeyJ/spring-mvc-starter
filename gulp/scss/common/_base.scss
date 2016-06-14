@@ -31,6 +31,11 @@ body{
   @include boxes;
   @include banners;
   padding-bottom: 60px;
+
+  .page-title{
+    margin-left: 1%;
+  }
+
 }
 
 #footer {
