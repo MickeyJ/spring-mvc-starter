@@ -8,6 +8,7 @@ buildscript {
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}") 
 	}
+
 }
 
 apply plugin: 'java'
@@ -25,7 +26,6 @@ targetCompatibility = 1.8
 repositories {
 	mavenCentral()
 }
-
 
 dependencies {
   compile group: 'org.spockframework', name: 'spock-core', version: '1.0-groovy-2.4'

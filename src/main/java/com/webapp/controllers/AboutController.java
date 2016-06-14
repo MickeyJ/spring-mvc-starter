@@ -9,10 +9,10 @@ public class AboutController {
 
   @RequestMapping("/about")
   public String about(Model model){
-    int[] array = {1,2,3,4,5};
 
-    model.addAttribute("title", "About");
+    int[] array = {1,2,3,4,5};
     model.addAttribute("array", array);
+    model.addAttribute("title", "About");
 
     return "about";
   }
