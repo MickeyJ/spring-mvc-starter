@@ -2,3 +2,4 @@ build/*
 node_modules
 bower_components
 src/main/resources/static/css/*
+src/main/resources/static/js/bundle.js
