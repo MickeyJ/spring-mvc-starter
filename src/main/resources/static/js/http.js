@@ -2,7 +2,7 @@
 document.getElementById("form").addEventListener("submit", (e) =>{
   e.preventDefault();
 
-  const nameInput = document.getElementById('user-name').value;
+  let nameInput = document.getElementById('user-name').value;
   const xhr = new XMLHttpRequest();
 
   xhr.open("POST", "/api/user?name=" + nameInput);
@@ -15,6 +15,7 @@ document.getElementById("form").addEventListener("submit", (e) =>{
       else
         console.error(xhr.status)
     }
+    document.getElementById('user-name').value = null;
   };
   xhr.send();
 

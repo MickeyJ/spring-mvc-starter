@@ -7,17 +7,18 @@
     <main layout:fragment="content">
 
       <section class="page-title">
-        <h1  th:text="${title}"></h1>
-        <h3 th:text="${message} +', '+ ${user.userName} +'?'"></h3>
+        <h2 th:text="${message} +', '+ ${user.userName} +'?'"></h2>
       </section>
 
       <section class="container-fluid">
-
+        <h4>Add Some Users</h4>
         <form id="form" class="form-inline">
           <input id="user-name" class="form-control" type="text" placeholder="Name" />
-          <button type="submit" class="btn btn-success">Post Some Data</button>
+          <button type="submit" class="btn btn-success">Add</button>
           <br/>
-          <a th:href="@{/api/user}">See Data</a>
+          <h6>*open up the browser console</h6>
+          <br/>
+          <a th:href="@{/api/user}"><h4>See Users</h4></a>
         </form>
 
       </section>

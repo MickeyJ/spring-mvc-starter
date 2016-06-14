@@ -1,9 +1,7 @@
 
 @mixin boxes{
 
-  .grid-box{
-    @include grid-box(100px, black, honeydew);
-  }
+  .grid-box{  @include grid-box(100px, black, honeydew);  }
 
 }
 
@@ -14,6 +12,7 @@
   color: $txt-color;
   background: $bg-color;
   border: 1px solid #aaa;
+  border-radius: 5px;
   box-sizing: border-box;
 }
 
