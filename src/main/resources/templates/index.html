@@ -9,7 +9,12 @@
       <h1 th:text="${title}"></h1>
       <h3 th:text="${message} +', '+ ${user.getUserName()} +'?'"></h3>
 
-      <button id="data-btn" class="btn btn-success">Post Some Data</button>
+      <form id="form" class="form-inline">
+        <input id="user-name" class="form-control" type="text" placeholder="Name" />
+        <button type="submit" class="btn btn-success">Post Some Data</button>
+      </form>
+
+      <a th:href="@{/api/user}">See Users</a>
 
       <script th:src="@{js/http.js}"></script>
 

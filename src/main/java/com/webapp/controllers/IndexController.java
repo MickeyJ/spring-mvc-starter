@@ -12,6 +12,7 @@ public class IndexController {
   public String index(Model model){
 
     UserModel user = new UserModel(1, "Joe");
+
     model.addAttribute("user", user);
     model.addAttribute("title", "Home");
     model.addAttribute("message", "Sup");

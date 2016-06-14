@@ -1,9 +1,12 @@
-var dataBtn = document.getElementById("data-btn");
 
-dataBtn.addEventListener("mousedown", function () {
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", "/api/user?name=Joe");
-  xhr.onreadystatechange = function () {
+document.getElementById("form").addEventListener("submit", (e) =>{
+  e.preventDefault();
+
+  const nameInput = document.getElementById('user-name').value;
+  const xhr = new XMLHttpRequest();
+
+  xhr.open("POST", "/api/user?name=" + nameInput);
+  xhr.onreadystatechange = () => {
     var status;
     if (xhr.readyState == 4) {
       status = xhr.status;
@@ -14,4 +17,5 @@ dataBtn.addEventListener("mousedown", function () {
     }
   };
   xhr.send();
+
 });
