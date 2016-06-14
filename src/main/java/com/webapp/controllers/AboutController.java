@@ -10,7 +10,7 @@ public class AboutController {
   @RequestMapping("/about")
   public String about(Model model){
 
-    model.addAttribute("array", makeArray(40));
+    model.addAttribute("array", makeArray(20));
     model.addAttribute("title", "About");
 
     return "about";
