@@ -7,7 +7,7 @@
     <main layout:fragment="content">
 
       <h1 th:text="${title}"></h1>
-      <h3 th:text="${message} +', '+ ${user.getUserName()} +'?'"></h3>
+      <h3 th:text="${message} +', '+ ${user.userName} +'?'"></h3>
 
       <form id="form" class="form-inline">
         <input id="user-name" class="form-control" type="text" placeholder="Name" />
