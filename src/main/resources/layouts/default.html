@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.thymeleaf.org">
+  <head>
+    <title>Java Spring MVC</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css}" />
+    <link rel="stylesheet" th:href="@{css/main.css}" />
+  </head>
+  <body>
+
+    <header id="header">
+      <a th:href="@{/}">Home</a>
+      <span> | </span>
+      <a th:href="@{/about}">About</a>
+    </header>
+
+    <main id="main" class="container-fluid" layout:fragment="content">
+      <!-- include here the content of the current page visited by the user -->
+    </main>
+
+    <footer id="footer">
+      <span>&copy; Java Spring MVC</span>
+    </footer>
+
+  </body>
+</html>

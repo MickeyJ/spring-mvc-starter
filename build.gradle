@@ -10,6 +10,10 @@ buildscript {
 	}
 }
 
+bootRun {
+  addResources = true
+}
+
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
@@ -29,6 +33,7 @@ repositories {
 
 dependencies {
 	compile("org.springframework.boot:spring-boot-starter-security")
+  compile("org.springframework.boot:spring-boot-devtools")
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	runtime('org.postgresql:postgresql')
 	testCompile('org.springframework.boot:spring-boot-starter-test') 
